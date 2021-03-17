@@ -1,3 +1,17 @@
-.test {
-  background-color: blue;
+.parent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: green;
+  width: 90%;
+}
+
+.box {
+  height: 400px;
+  width: 25%;
+  border: 10px solid orange;
+  box-sizing: border-box;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  text-align: center;
 }
