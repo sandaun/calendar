@@ -15,17 +15,3 @@
   color: white;
   text-align: center;
 }
-
-.week {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  width: 100%;
-  background-color: greenyellow;
-}
-
-.day {
-  display: flex;
-  flex-grow: 1;
-  justify-content: space-around;
-}
