@@ -57,7 +57,7 @@ function App() {
   return (
     <div>
       <header className={styles.container}>
-        <Calendar days={fullYear} />
+        <Calendar year={fullYear} />
       </header>
     </div>
   );

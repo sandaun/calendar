@@ -4,7 +4,7 @@ import styles from "./week.module.css";
 
 function Week(props) {
   return (
-    <div className={styles.week} style={{ backgroundColor: "red" }}>
+    <div className={styles.week} style={{ backgroundColor: "orange" }}>
       {props.children}
     </div>
   );
