@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import styles from "./App.module.css";
-import { Calendar } from "./pages/Calendar";
+import { Calendar } from "./pages/calendar";
 
 function App() {
   let fullYear = [];

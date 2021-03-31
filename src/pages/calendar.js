@@ -10,9 +10,9 @@ const BuildYear = (props) => {
   const { year } = props;
 
   return year.map((months, index) => {
-    const monthDaysArray = Object.values(months);
+    const monthDaysArray = Object.values(months).flat();
     const monthNames = Object.keys(months);
-    console.log(1, months);
+    // console.log(1, monthDaysArray);
 
     return (
       <Month
@@ -42,7 +42,7 @@ const BuildYear = (props) => {
 
 function Calendar(props) {
   const { year } = props;
-  console.log(2, year);
+  // console.log(2, year);
 
   return (
     <div className={styles.parent}>
