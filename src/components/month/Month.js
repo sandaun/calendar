@@ -23,10 +23,21 @@ const BuildMonth = (monthDays) => {
 
   for (let i = count; i < monthDays.length; i++) {
     for (let j = 0; j < days.length; j++) {
-      if (monthDays[i].dayName === days[j]) {
-        // console.log(days[j]);
-        weeks.push(<div className={styles.day}>{monthDays[i].dayNumber}</div>);
+      if (monthDays[i].dayNumber === 1) {
+        if (monthDays[i].dayName === days[j]) {
+          weeks.push(
+            <div className={styles.day}>{monthDays[i].dayNumber}</div>
+          );
+          console.log(1, days[j]);
+          break;
+        } else {
+          weeks.push(<div className={styles.day}>B</div>);
+          console.log(2, days[j]);
+        }
       }
+      // else if (monthDays[i].dayName === days[j]) {
+      //   weeks.push(<div className={styles.day}>{monthDays[i].dayNumber}</div>);
+      // }
     }
   }
 
