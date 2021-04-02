@@ -28,16 +28,17 @@ const BuildMonth = (monthDays) => {
           weeks.push(
             <div className={styles.day}>{monthDays[i].dayNumber}</div>
           );
-          console.log(1, days[j]);
           break;
         } else {
           weeks.push(<div className={styles.day}>B</div>);
-          console.log(2, days[j]);
         }
+      } else if (monthDays[i].dayName === days[j]) {
+        weeks.push(<div className={styles.day}>{monthDays[i].dayNumber}</div>);
       }
-      // else if (monthDays[i].dayName === days[j]) {
-      //   weeks.push(<div className={styles.day}>{monthDays[i].dayNumber}</div>);
-      // }
+    }
+    if (monthDays[i].dayName === "Sunday") {
+      console.log(123, i);
+      break;
     }
   }
 
