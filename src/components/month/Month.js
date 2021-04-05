@@ -40,9 +40,9 @@ function Month(props) {
   const { monthNames, monthDays } = props;
   let week = [];
   const weeks = [];
-  let testing = 0;
+  let lastDayPosition = 0;
 
-  const buildWeek = (kk) => {
+  const buildWeek = (position) => {
     const days = [
       "Monday",
       "Tuesday",
@@ -53,7 +53,7 @@ function Month(props) {
       "Sunday",
     ];
     console.log(1, monthNames);
-    for (let i = kk; i < monthDays.length; i++) {
+    for (let i = position; i < monthDays.length; i++) {
       for (let j = 0; j < days.length; j++) {
         if (monthDays[i].dayNumber === 1) {
           if (monthDays[i].dayName === days[j]) {
@@ -69,25 +69,22 @@ function Month(props) {
         }
       }
       if (monthDays[i].dayName === "Sunday" || i === monthDays.length - 1) {
-        testing = i + 1;
-        // console.log(123, testing);
+        lastDayPosition = i + 1;
         break;
       }
     }
-    console.log(1111, kk);
+    console.log(1111, position);
 
     weeks.push(week);
     week = [];
     // console.log(444, weeks.length);
-    // console.log(555, testing);
     if (weeks.length < 6) {
-      buildWeek(testing);
+      buildWeek(lastDayPosition);
       console.log(999999999);
     }
-    // return week;
   };
 
-  buildWeek(testing);
+  buildWeek(lastDayPosition);
 
   return (
     <div className={styles.box}>
