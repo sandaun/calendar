@@ -6,10 +6,13 @@ import { Month } from "../components/month/Month";
 
 import styles from "./calendar.module.css";
 
-const BuildYear = (props) => {
+const BuildCalendar = (props) => {
   const { year } = props;
+  console.log(3, year);
 
   return year.map((months, index) => {
+
+    console.log(index, months);
     const monthDaysArray = Object.values(months).flat();
     const monthNames = Object.keys(months);
     // console.log(1, monthDaysArray);
@@ -42,11 +45,11 @@ const BuildYear = (props) => {
 
 function Calendar(props) {
   const { year } = props;
-  // console.log(2, year);
+  console.log(2, year);
 
   return (
     <div className={styles.parent}>
-      <BuildYear year={year} />
+      <BuildCalendar year={year} />
     </div>
   );
 }
