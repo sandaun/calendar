@@ -4,7 +4,7 @@ import { Calendar } from "./pages/calendar";
 
 function App() {
   let fullYear = [];
-  const getDayNames = (year: number, month: number) => {
+  const getDayNames = (year, month) => {
     const days = [
       "Sunday",
       "Monday",
